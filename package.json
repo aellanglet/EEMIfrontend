@@ -8,11 +8,16 @@
     "post-update": "yarn upgrade --latest"
   },
   "dependencies": {
+    "hydrate": "1.0.0",
     "next": "latest",
+    "next-mdx-remote": "2.1.3",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "styled-components": "5.2.1"
   },
   "license": "MIT",
-  "keywords": ["next"],
+  "keywords": [
+    "next"
+  ],
   "description": "A \"Hello World\" application with multiple pages that shows how Next.js routing works."
 }

@@ -1,12 +1,6 @@
 import Link from "next/link";
+import { Navigation } from "../components/index";
 
-export default function IndexPage() {
-  return (
-    <div>
-      <h1>Home page</h1>
-      <Link href="/collections">Collections</Link>
-      <Link href="/contact">Contact</Link>
-      <Link href="/mentions">Mentions Légales</Link>
-    </div>
-  );
+export default function AccueilPage() {
+  return <Navigation />;
 }
