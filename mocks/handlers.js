@@ -1,9 +1,15 @@
 import { rest } from 'msw'
 
 export const handlers = [
-    rest.get('http://localhost:3000/cards', (req, res, ctx) => {
+    rest.get('http://localhost:3000/api/cards', (req, res, ctx) => {
         return res(
-            ctx.json({card:cards[0]})
+            ctx.json(cards)
+        )
+    }),
+    rest.get('http://localhost:3000/api/cards/:id', (req, res, ctx) => {
+        const card = cards.filter((card)=>card.id === req.params.id)[0]
+        return res(
+            ctx.json(card)
         )
     }),
 ]
@@ -14,7 +20,7 @@ const cards = [
         "value": "ACE",
         "suit": "SPADES",
         "id": "AS"
-    }, {
+    },{
         "img": "https://deckofcardsapi.com/static/img/2S.png",
         "value": "2",
         "suit": "SPADES",
