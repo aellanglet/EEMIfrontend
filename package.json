@@ -19,5 +19,8 @@
   "keywords": [
     "next"
   ],
-  "description": "A EEMI project."
+  "description": "A EEMI project.",
+  "devDependencies": {
+    "msw": "^0.26.0"
+  }
 }

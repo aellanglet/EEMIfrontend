@@ -6,7 +6,7 @@ export const Navigation = (props) => {
     <Header {...props}>
       <div>
         <Link href="/">Accueil</Link>
-        <Link href="/collections">Collections</Link>
+        <Link href="/cards">Cards</Link>
         <Link href="/contact">Contact</Link>
         <Link href="/mentions">Mentions Légales</Link>
       </div>
