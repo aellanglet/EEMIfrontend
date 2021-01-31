@@ -13,7 +13,7 @@ By clicking on one of them, you can access `/cards/:id` which let you see all th
 First, you need to add a `.env.local` file with
 
 ```
-URL="http://localhost:3000/"
+URL="http://localhost:3000"
 ```
 
 Then you can go !
