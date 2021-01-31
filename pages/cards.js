@@ -20,7 +20,7 @@ const CardsPage = ({ cards }) => {
 
 export default CardsPage
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     // Call an external API endpoint to get posts
     return await fetch('http://localhost:3000/api/cards')
     .then(res=>res.json())
