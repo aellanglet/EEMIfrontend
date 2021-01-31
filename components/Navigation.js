@@ -16,13 +16,9 @@ export const Navigation = (props) => {
 export default Navigation;
 
 const Header = styled.div`
-  position: flex;
-  z-index: 100;
-  top: 0;
   height: 80px;
   width: 100%;
   margin: auto;
-  padding-top: env(safe-area-inset-top);
   display: flex;
   justify-content: center;
   box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.04);

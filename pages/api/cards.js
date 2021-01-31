@@ -2,5 +2,5 @@ import cards from '../../public/files/cards.json';
 
 export default (req, res) => {
     res.statusCode = 200
-    res.json(cards.slice(10))
+    res.json(cards)
   }  

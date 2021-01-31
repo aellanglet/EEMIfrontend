@@ -1,3 +1,5 @@
+import '../styles/styles.css'
+
 if (process.env.NODE_ENV !== "production") {
     require("../mocks");
 }

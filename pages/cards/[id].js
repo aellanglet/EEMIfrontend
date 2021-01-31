@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Navigation } from "../../components";
 
 const CardPage = ({ card }) => {
@@ -6,7 +7,12 @@ const CardPage = ({ card }) => {
             <Navigation />
             <div style={{ marginTop: "100px" }}>
                 <h1>{card.id}</h1>
-                <img src={card.img} />
+                <Image
+                    src={card.img}
+                    alt={card.id}
+                    width="200px"
+                    height="250px"
+                />
                 <p>{card.value} of {card.suit}</p>
             </div>
         </React.Fragment>
