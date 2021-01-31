@@ -5,6 +5,9 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 function EEMIfrontendApp({ Component, pageProps }) {
+    if (pageProps.error) {
+        return <Error statusCode={pageProps.error.statusCode} title={pageProps.error.message} />;
+    }
     return <Component {...pageProps} />;
 }
 
