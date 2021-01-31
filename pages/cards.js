@@ -41,7 +41,8 @@ export async function getServerSideProps() {
 
 const Card = ({ card }) => {
     return (
-        <Link key={card.id} href={`/cards/[id]`} as={`/cards/${card.id}`}>
+        <Link key={card.id} href={`cards/[id]`} as={`cards/${card.id}`}>
+            <a>
         <>
             <div className="card">
                     <p>{card.value}</p>
@@ -53,6 +54,7 @@ const Card = ({ card }) => {
                 />
             </div>
         </>
+        </a>
         </Link>
     )
 }
