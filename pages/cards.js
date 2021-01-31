@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styled from "styled-components";
 import { Navigation } from "../components/index";
+import { motion } from "framer-motion"
 
 const CardsPage = ({ cards }) => {
     return (
@@ -44,6 +45,8 @@ const Card = ({ card }) => {
         <Link key={card.id} href={`cards/[id]`} as={`cards/${card.id}`}>
             <a>
         <>
+            <motion.div animate={{ rotate: 360 }}
+                transition={{ duration: 2 }}>
             <div className="card">
                     <p>{card.value}</p>
                 <Image
@@ -53,6 +56,7 @@ const Card = ({ card }) => {
                     height="250px"
                 />
             </div>
+            </motion.div>
         </>
         </a>
         </Link>
@@ -60,5 +64,10 @@ const Card = ({ card }) => {
 }
 
 const Cards = styled.div`
-  display:flex;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: start;
+align-items: auto;
+align-content: start;
 `;
