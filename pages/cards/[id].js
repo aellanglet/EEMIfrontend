@@ -5,7 +5,7 @@ const CardPage = ({ card }) => {
     return (
         <React.Fragment>
             <Navigation />
-            <div style={{ marginTop: "100px" }}>
+            <div className="single-card">
                 <h1>{card.id}</h1>
                 <Image
                     src={card.img}

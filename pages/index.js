@@ -16,6 +16,7 @@ export default function AccueilPage() {
         </p>
 
         <h2>How to run the app</h2>
+        <div className="code">
         <code>
           # Initialize project <br />
           yarn install<br /><br />
@@ -23,9 +24,10 @@ export default function AccueilPage() {
           # run project in dev environment<br />
           yarn dev
         </code>
-
+        </div>
         <p>For production deployment, 2 bash views needed :</p>
 
+        <div className="code">
         <code>
           # on first<br />
           yarn dev <br/>
@@ -36,12 +38,13 @@ export default function AccueilPage() {
           # When it is done, you can exit them all and run <br />
           yarn start<br />
         </code>
-
+        </div>
         <h2>How to run tests</h2>
+        <div className="code">
         <code>
           yarn test
         </code>
-
+        </div>
         <h2>How to use backstopjs</h2>
         <p>
         Backstopjs is installed in dev environment. <br /> <br />
@@ -49,7 +52,7 @@ export default function AccueilPage() {
         If you don't have backstopjs CLI locally, don't worry, use : yarn backstop instead. <br /><br />
 
         Backstop is already initialized. All you need to run is: <br /> <br />
-
+        <div className="code">
         <code>
           backstop test --config="backstop.config.js" <br /><br />
 
@@ -57,7 +60,7 @@ export default function AccueilPage() {
 
           yarn backstop test --config="backstop.config.js"
         </code>
-
+        </div>
         </p>
       </div>
     </React.Fragment>

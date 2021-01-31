@@ -1,14 +1,43 @@
 body {
     background: white;
+    font-family: "Segoe UI", Helvetica,Arial,sans-serif;
+}
+a {
+    color: #0d6efd;
+    text-decoration: none;
 }
 
+a:hover {
+    color: #145DCB;
+    text-decoration: underline;
+}
 .accueilPage, .mentionsPage, .contactPage {
     max-width: 940px;
     margin: 80px auto;
 }
-
+/* .cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: auto;
+    align-content: start
+} */
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.code {
+    width: 500px;
+    background-color: #F6F8FA;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+    border-radius: 3px;
+}
+
+.single-card {
+    text-align: center;
 }

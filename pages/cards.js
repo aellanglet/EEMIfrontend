@@ -60,5 +60,10 @@ const Card = ({ card }) => {
 }
 
 const Cards = styled.div`
-  display:flex;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: start;
+align-items: auto;
+align-content: start;
 `;
