@@ -32,14 +32,11 @@ const Header = styled.div`
     align-items: center;
     padding: 24px;
   }
-  .right {
-    a.nav {
+    a {
       padding: 10px 40px;
       text-decoration: none;
-      color: white;
       &.active {
         color: hsla(225, 51%, 39%);
       }
     }
-  }
 `;
