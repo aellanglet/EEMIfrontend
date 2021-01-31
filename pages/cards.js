@@ -39,7 +39,7 @@ export async function getServerSideProps() {
             },
         }
     })
-    .catch(error => ({ props:{},error: {message: error} }))
+        .catch(error => ({ props: { error: { message: error } }} ))
 }
 
 const Card = ({ card }) => {

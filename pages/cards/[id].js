@@ -34,5 +34,5 @@ export async function getServerSideProps({params}) {
         // Pass card data to the page via props
         return { props: { card } }
     })
-    .catch(error => ({ props:{},error: {message: error} }))
+        .catch(error => ({ props: { error: { message: error } }}))
 }
