@@ -6,7 +6,7 @@ export const handlers = [
         return await res(
             ctx.delay(500),
             ctx.status(202, 'Mocked Status'),
-            ctx.json(cards.slice(0, 10))
+            ctx.json(cards.slice(0, 52))
         )
     }),
     rest.get(`${process.env.URL}/api/cards/:id`, async (req, res, ctx) => {
