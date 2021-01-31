@@ -1,20 +1,26 @@
 import Image from 'next/image';
 import { Navigation } from "../../components";
+import { motion } from "framer-motion"
 
 const CardPage = ({ card }) => {
     return (
         <React.Fragment>
             <Navigation />
+            <motion.div animate={{ scale: 1.5 }}
+                transition={{ duration: 0.5 }}>
             <div className="single-card">
                 <h1>{card.id}</h1>
+                
                 <Image
                     src={card.img}
                     alt={card.id}
-                    width="200px"
-                    height="250px"
+                    width="100px"
+                    height="125px"
                 />
+                
                 <p>{card.value} of {card.suit}</p>
             </div>
+            </motion.div>
         </React.Fragment>
     );
 }
