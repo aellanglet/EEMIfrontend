@@ -22,24 +22,21 @@ export default CardsPage
 
 export async function getServerSideProps() {
     // Call an external API endpoint to get posts
-    return await fetch('http://localhost:3000/api/cards')
-    .then(res=>res.json())
-    .then(cards=>{
-        if (!cards) {
-            return {
-                notFound: true,
-            }
-        }
-
-        // By returning { props: { cards } }, the Blog component
-        // will receive `cards` as a prop at build time
+    const res = await fetch('http://localhost:3000/api/cards')
+    const cards = res.json()
+    if (!cards) {
         return {
-            props: {
-                cards,
-            },
+            notFound: true,
         }
-    })
-        .catch(error => ({ props: { error: { message: error } }} ))
+    }
+    
+    // By returning { props: { cards } }, the Blog component
+    // will receive `cards` as a prop at build time
+    return {
+        props: {
+            cards,
+        },
+    }
 }
 
 const Card = ({ card }) => {
