@@ -23,7 +23,7 @@ export default CardsPage
 export async function getServerSideProps() {
     // Call an external API endpoint to get posts
     const res = await fetch(`${process.env.URL}/api/cards`)
-    const cards = res.json()
+    const cards = await res.json()
     if (!cards) {
         return {
             notFound: true,
