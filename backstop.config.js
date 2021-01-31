@@ -16,9 +16,8 @@ module.exports = {
                 "onReadyScript": "puppet/onReady.js",
                     "scenarios": [
                         {
-                            "label": "BackstopJS Homepage",
-                            "cookiePath": "backstop_data/engine_scripts/cookies.json",
-                            "url": "https://garris.github.io/BackstopJS/",
+                            "label": "EEMIfrontend Cards List Page",
+                            "url": "http://localhost:3000/cards",
                             "referenceUrl": "",
                             "readyEvent": "",
                             "readySelector": "",
