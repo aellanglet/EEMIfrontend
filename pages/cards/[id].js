@@ -22,17 +22,14 @@ const CardPage = ({ card }) => {
 export default CardPage
 
 export async function getServerSideProps({params}) {
-    return await fetch(`http://localhost:3000/api/cards/${params.id}`)
-    .then(res=>res.json())
-    .then(card=>{
-        if (!card) {
-            return {
-                notFound: true,
-            }
+    const res = await fetch(`http://localhost:3000/api/cards/${params.id}`)
+    const card = res.json()
+    if (!card) {
+        return {
+            notFound: true,
         }
-
-        // Pass card data to the page via props
-        return { props: { card } }
-    })
-        .catch(error => ({ props: { error: { message: error } }}))
+    }
+    
+    // Pass card data to the page via props
+    return { props: { card } }
 }
