@@ -22,7 +22,7 @@ const CardPage = ({ card }) => {
 export default CardPage
 
 export async function getServerSideProps({params}) {
-    const res = await fetch(`http://localhost:3000/api/cards/${params.id}`)
+    const res = await fetch(`${process.env.URL}/api/cards/${params.id}`)
     const card = res.json()
     if (!card) {
         return {
