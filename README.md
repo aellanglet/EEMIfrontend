@@ -10,6 +10,14 @@ By clicking on one of them, you can access `/cards/:id` which let you see all th
 
 ## How to run the app
 
+First, you need to add a `.env.local` file with
+
+```
+URL="http://localhost:3000/"
+```
+
+Then you can go !
+
 ```bash
 # Initialize project
 yarn install
@@ -58,9 +66,6 @@ backstop test --config="backstop.config.js"
 yarn backstop test --config="backstop.config.js"
 ```
 
-* * * * *
-## Deploy on Vercel
+Find project here :
 
-Deploy the example using [Vercel](https://vercel.com):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/hello-world)
+https://standard52carddeck.vercel.app/
