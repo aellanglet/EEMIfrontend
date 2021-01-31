@@ -7,7 +7,14 @@ const components = { Navigation };
 
 export default function ContactPage({ content }) {
   const hydratedContent = hydrate(content, { components });
-  return <div className="contactPage">{hydratedContent}</div>;
+  return (
+    <React.Fragment>
+      <Navigation />
+      <div className="contactPage">
+        {hydratedContent}
+      </div>
+    </React.Fragment>
+  );
 }
 
 export async function getStaticProps() {
@@ -16,8 +23,6 @@ export async function getStaticProps() {
 }
 
 const contact = `
-<Navigation/>
-
 # Contactez-nous
 
 `;

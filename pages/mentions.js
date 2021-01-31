@@ -7,7 +7,14 @@ const components = { Navigation };
 
 export default function MentionsPage({ content }) {
   const hydratedContent = hydrate(content, { components });
-  return <div className="mentionsPage">{hydratedContent}</div>;
+  return (
+    <React.Fragment>
+      <Navigation/>
+      <div className="mentionsPage">
+        {hydratedContent}
+      </div>
+    </React.Fragment>
+  );
 }
 
 export async function getStaticProps() {
@@ -16,8 +23,6 @@ export async function getStaticProps() {
 }
 
 const mentions = `
-<Navigation/>
-
 # Copyright 2021 github/EEMIFRONTEND
 
 * * * * *

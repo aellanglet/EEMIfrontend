@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Navigation } from "../../components";
 
 const CardPage = ({ card }) => {
@@ -6,7 +7,12 @@ const CardPage = ({ card }) => {
             <Navigation />
             <div style={{ marginTop: "100px" }}>
                 <h1>{card.id}</h1>
-                <img src={card.img} />
+                <Image
+                    src={card.img}
+                    alt={card.id}
+                    width="200px"
+                    height="250px"
+                />
                 <p>{card.value} of {card.suit}</p>
             </div>
         </React.Fragment>
@@ -15,18 +21,7 @@ const CardPage = ({ card }) => {
 
 export default CardPage
 
-export async function getStaticPaths() {
-    // Call an external API endpoint to get posts
-    return await fetch('http://localhost:3000/api/cards')
-    .then(res=>res.json())
-    .then(cards => cards.map((card) => ({ params: { id: card.id } })))
-    .then(paths=>{
-        return { paths, fallback: false }
-    })
-}
-
-// This also gets called at build time
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({params}) {
     return await fetch(`http://localhost:3000/api/cards/${params.id}`)
     .then(res=>res.json())
     .then(card=>{
